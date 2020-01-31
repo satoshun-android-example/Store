@@ -29,7 +29,7 @@ const val CARDVIEW = "androidx.cardview:cardview:1.0.0"
 
 const val INSETTER = "dev.chrisbanes:insetter-ktx:0.2.0"
 
-const val FLEXBOX = "com.google.android:flexbox:2.0.0"
+const val STORE = "com.dropbox.mobile.store:store4:4.0.0-alpha02"
 
 const val CONTENTPAGER = "androidx.contentpager:contentpager:1.0.0-rc01"
 const val WEBKIT = "androidx.webkit:webkit:1.1.0"

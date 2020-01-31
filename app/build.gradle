@@ -50,7 +50,7 @@ dependencies {
   implementation VIEWMODEL
   implementation LIFECYCLE_RUNTIME
 
-  implementation FLEXBOX
+  implementation STORE
 
   implementation GLIDE
 
