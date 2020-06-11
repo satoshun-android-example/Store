@@ -27,8 +27,9 @@ class SimpleFragment : Fragment(R.layout.simple_frag) {
 
     val store = StoreBuilder
       .fromNonFlow<String, String> {
-        println("called $it")
+        println("called source $it")
         delay(500)
+        println("finished source $it")
         "test"
       }
       .cachePolicy(
@@ -39,23 +40,24 @@ class SimpleFragment : Fragment(R.layout.simple_frag) {
           .build()
       )
 
+    val key = "hoge"
     lifecycleScope.launch {
-      store.build().stream(StoreRequest.cached("hoge", false)).collect {
-        println(it)
+      store.build().stream(StoreRequest.cached(key, false)).collect {
+        println("stream1 $it")
       }
     }
 
     lifecycleScope.launch {
       delay(1000)
-      store.build().stream(StoreRequest.cached("hoge", false)).collect {
-        println(it)
+      store.build().stream(StoreRequest.cached(key, false)).collect {
+        println("stream2 $it")
       }
     }
 
     lifecycleScope.launch {
-      delay(1000)
-      val result = store.build().get("hoge")
-      println(result)
+      delay(2000)
+      val result = store.build().get(key)
+      println("get $result")
     }
   }
 }

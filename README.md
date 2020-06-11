@@ -1,1 +1,1 @@
-# FlexboxLayout sample
+# Store sample

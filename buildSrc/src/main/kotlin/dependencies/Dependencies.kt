@@ -4,10 +4,10 @@ const val COMPILE_SDK = 29
 const val MIN_SDK = 21
 const val TARGET_SDK = 29
 
-private const val VKOTLIN = "1.3.61"
-private const val VNAVIGATION = "2.2.0-rc02"
+private const val VKOTLIN = "1.3.72"
+private const val VNAVIGATION = "2.2.0"
 
-const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.6.0-rc02"
+const val ANDROID_PLUGIN = "com.android.tools.build:gradle:4.0.0"
 const val KOTLIN_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VKOTLIN"
 const val SAFEARGS_PLUGIN =
   "androidx.navigation:navigation-safe-args-gradle-plugin:$VNAVIGATION"
@@ -19,8 +19,8 @@ const val COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$VCOUROUTIN
 const val UI_COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$VCOUROUTINE"
 
 const val KTX = "androidx.core:core-ktx:1.1.0"
-const val ACTIVITYX = "androidx.activity:activity-ktx:1.1.0-rc02"
-const val FRAGMENTX = "androidx.fragment:fragment-ktx:1.2.0-rc02"
+const val ACTIVITYX = "androidx.activity:activity-ktx:1.1.0"
+const val FRAGMENTX = "androidx.fragment:fragment-ktx:1.2.0"
 
 const val APPCOMPAT = "androidx.appcompat:appcompat:1.1.0"
 const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.0.0"
@@ -30,10 +30,6 @@ const val CARDVIEW = "androidx.cardview:cardview:1.0.0"
 const val INSETTER = "dev.chrisbanes:insetter-ktx:0.2.0"
 
 const val STORE = "com.dropbox.mobile.store:store4:4.0.0-alpha02"
-
-const val CONTENTPAGER = "androidx.contentpager:contentpager:1.0.0-rc01"
-const val WEBKIT = "androidx.webkit:webkit:1.1.0"
-const val MEDIA2 = "androidx.media2:media2:1.0.0-alpha04"
 
 const val MATERIAL = "com.google.android.material:material:1.1.0-beta02"
 const val PAGING = "androidx.paging:paging-runtime:2.1.0"
