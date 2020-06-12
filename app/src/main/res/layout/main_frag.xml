@@ -19,4 +19,11 @@
     android:layout_height="64dp"
     android:layout_margin="8dp"
     android:text="Simple" />
+
+  <Button
+    android:id="@+id/simple3"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_margin="8dp"
+    android:text="Simple3" />
 </LinearLayout>

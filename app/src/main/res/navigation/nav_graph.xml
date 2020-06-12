@@ -16,6 +16,10 @@
     <action
       android:id="@+id/nav_home_to_simple2"
       app:destination="@id/nav_simple2" />
+
+    <action
+      android:id="@+id/nav_home_to_simple3"
+      app:destination="@id/nav_simple3" />
   </fragment>
 
   <fragment
@@ -26,5 +30,10 @@
   <fragment
     android:id="@+id/nav_simple2"
     android:name="com.github.satoshun.example.main.simple.SimpleFragment2"
+    tools:layout="@layout/simple_frag" />
+
+  <fragment
+    android:id="@+id/nav_simple3"
+    android:name="com.github.satoshun.example.main.simple.SimpleFragment3"
     tools:layout="@layout/simple_frag" />
 </navigation>
