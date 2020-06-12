@@ -12,10 +12,19 @@
     <action
       android:id="@+id/nav_home_to_simple"
       app:destination="@id/nav_simple" />
+
+    <action
+      android:id="@+id/nav_home_to_simple2"
+      app:destination="@id/nav_simple2" />
   </fragment>
 
   <fragment
     android:id="@+id/nav_simple"
     android:name="com.github.satoshun.example.main.simple.SimpleFragment"
+    tools:layout="@layout/simple_frag" />
+
+  <fragment
+    android:id="@+id/nav_simple2"
+    android:name="com.github.satoshun.example.main.simple.SimpleFragment2"
     tools:layout="@layout/simple_frag" />
 </navigation>
