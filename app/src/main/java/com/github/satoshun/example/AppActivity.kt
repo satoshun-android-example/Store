@@ -7,9 +7,11 @@ import androidx.core.view.doOnNextLayout
 import androidx.core.view.doOnPreDraw
 import androidx.lifecycle.lifecycleScope
 import com.github.satoshun.example.databinding.AppActBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class AppActivity : AppCompatActivity() {
   private lateinit var binding: AppActBinding
 
