@@ -6,9 +6,8 @@ import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.delay
 import javax.inject.Inject
 import javax.inject.Singleton
-import kotlin.time.DurationUnit
 import kotlin.time.ExperimentalTime
-import kotlin.time.toDuration
+import kotlin.time.seconds
 
 @ExperimentalTime
 @ExperimentalCoroutinesApi
@@ -25,7 +24,7 @@ class SimpleRepository @Inject constructor() {
       )
       .cachePolicy(
         MemoryPolicy.builder()
-          .setExpireAfterWrite(60.toDuration(DurationUnit.SECONDS))
+          .setExpireAfterWrite(60.seconds)
           .build()
       )
       .build()
