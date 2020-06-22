@@ -11,7 +11,7 @@ import kotlin.time.seconds
 
 @ExperimentalTime
 @ExperimentalCoroutinesApi
-@OptIn(FlowPreview::class)
+@FlowPreview
 @Singleton
 class SimpleRepository @Inject constructor() {
   private val store =

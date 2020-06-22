@@ -7,6 +7,13 @@
   tools:ignore="HardcodedText">
 
   <Button
+    android:id="@+id/file"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_margin="8dp"
+    android:text="File" />
+
+  <Button
     android:id="@+id/simple"
     android:layout_width="match_parent"
     android:layout_height="64dp"

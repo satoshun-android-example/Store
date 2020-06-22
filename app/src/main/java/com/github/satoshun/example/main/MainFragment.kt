@@ -14,6 +14,10 @@ class MainFragment : Fragment(R.layout.main_frag) {
     super.onViewCreated(view, savedInstanceState)
     binding = MainFragBinding.bind(view)
 
+    binding.file.setOnClickListener {
+      findNavController().navigate(MainFragmentDirections.navHomeToFile())
+    }
+
     binding.simple.setOnClickListener {
       findNavController().navigate(MainFragmentDirections.navHomeToSimple())
     }

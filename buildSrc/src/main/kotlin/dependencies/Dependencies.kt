@@ -30,6 +30,7 @@ const val CARDVIEW = "androidx.cardview:cardview:1.0.0"
 const val INSETTER = "dev.chrisbanes:insetter-ktx:0.2.0"
 
 const val STORE = "com.dropbox.mobile.store:store4:4.0.0-alpha06"
+const val STORE_FILE_SYSTEM = "com.dropbox.mobile.store:filesystem4:4.0.0-alpha06"
 
 const val MATERIAL = "com.google.android.material:material:1.1.0-beta02"
 const val PAGING = "androidx.paging:paging-runtime:2.1.0"
@@ -79,10 +80,18 @@ const val WORK_MANAGER = "androidx.work:work-runtime-ktx:2.0.0-rc01"
 
 const val ANDROID_ANNOTATION = "androidx.annotation:annotation:1.0.0"
 
+private const val VDAGGER = "2.28"
+const val DAGGER = "com.google.dagger:dagger:$VDAGGER"
+const val DAGGER_COMPILER = "com.google.dagger:dagger-compiler:$VDAGGER"
+
 private const val VDAGGER_HILT = "2.28-alpha"
 const val DAGGER_HILT_PLUGIN = "com.google.dagger:hilt-android-gradle-plugin:$VDAGGER_HILT"
 const val DAGGER_HILT = "com.google.dagger:hilt-android:$VDAGGER_HILT"
 const val DAGGER_HILT_COMPILER = "com.google.dagger:hilt-android-compiler:$VDAGGER_HILT"
+
+const val OKIO = "com.squareup.okio:okio:2.6.0"
+const val MOSHI = "com.squareup.moshi:moshi-kotlin:1.9.3"
+const val MOSHI_CODEGEN = "com.squareup.moshi:moshi-kotlin-codegen:1.9.3"
 
 const val GLIDE = "com.github.bumptech.glide:glide:4.9.0"
 

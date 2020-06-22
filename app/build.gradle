@@ -52,6 +52,7 @@ dependencies {
   implementation LIFECYCLE_RUNTIME
 
   implementation STORE
+  implementation STORE_FILE_SYSTEM
 
   implementation GLIDE
 
@@ -67,8 +68,14 @@ dependencies {
   implementation NAVIGATION_FRAGMENT
   implementation NAVIGATION_UI
 
+  implementation DAGGER
+  kapt DAGGER_COMPILER
   implementation DAGGER_HILT
   kapt DAGGER_HILT_COMPILER
+
+  implementation OKIO
+  implementation MOSHI
+  kapt MOSHI_CODEGEN
 
   testImplementation JUNIT
 
