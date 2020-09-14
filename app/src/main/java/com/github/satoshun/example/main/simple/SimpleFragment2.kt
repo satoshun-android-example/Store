@@ -29,10 +29,10 @@ class SimpleFragment2 : Fragment(R.layout.simple_frag) {
     var count = 0
     val store = StoreBuilder
       .from(
-        fetcher = nonFlowValueFetcher<String, String> {
-          println("called source: ${count++} $it")
+        fetcher = Fetcher.of { key: String ->
+          println("called source: ${count++} $key")
           delay(500)
-          println("finished source: $it")
+          println("finished source: $key")
           "test"
         }
       )

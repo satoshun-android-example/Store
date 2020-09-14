@@ -9,7 +9,9 @@ import com.dropbox.android.external.store4.*
 import com.squareup.moshi.JsonClass
 import com.squareup.moshi.Moshi
 import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlinx.coroutines.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.withContext
 import okio.Buffer
 import java.util.concurrent.atomic.AtomicInteger
 import javax.inject.Inject
@@ -19,8 +21,6 @@ import kotlin.time.seconds
 
 @Singleton
 @ExperimentalTime
-@ExperimentalCoroutinesApi
-@FlowPreview
 class FileRepository @Inject constructor(
   @ApplicationContext private val context: Context
 ) {
@@ -37,12 +37,12 @@ class FileRepository @Inject constructor(
   private val adapter = moshi.adapter(Simple::class.java)
 
   private val store = StoreBuilder.from(
-    fetcher = nonFlowValueFetcher { key ->
+    fetcher = Fetcher.of {
       delay(2000)
-      Simple(count = count.addAndGet(1), name = "$key $key")
+      Simple(count = count.addAndGet(1), name = "$it")
     },
-    sourceOfTruth = SourceOfTruth.fromNonFlow(
-      reader = {
+    sourceOfTruth = SourceOfTruth.of(
+      nonFlowReader = {
         runCatching {
           val source = fileSystemPersister.read(Unit)
           source?.let { adapter.fromJson(it) }

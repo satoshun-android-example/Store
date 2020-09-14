@@ -17,7 +17,7 @@ class SimpleRepository @Inject constructor() {
   private val store =
     StoreBuilder
       .from<String, Simple>(
-        fetcher = nonFlowValueFetcher<String, Simple> { key ->
+        fetcher = Fetcher.of { key ->
           delay(2000)
           Simple(id = key, name = "$key $key")
         }

@@ -28,8 +28,8 @@ class SimpleFragment3 : Fragment(R.layout.simple_frag) {
     binding = SimpleFragBinding.bind(view)
 
     var currentItem: List<String>? = null
-    val sourceOfTruth = SourceOfTruth.fromNonFlow<Unit, List<String>, List<String>>(
-      reader = { currentItem },
+    val sourceOfTruth = SourceOfTruth.of<Unit, List<String>, List<String>>(
+      nonFlowReader = { currentItem },
       writer = { _, input ->
         currentItem = input
       },
@@ -44,7 +44,7 @@ class SimpleFragment3 : Fragment(R.layout.simple_frag) {
     var count = 0
     val store = StoreBuilder
       .from(
-        fetcher = nonFlowValueFetcher<Unit, List<String>> {
+        fetcher = Fetcher.of {
           println("called source: ${count++} $it")
           delay(500)
           println("finished source: $it")

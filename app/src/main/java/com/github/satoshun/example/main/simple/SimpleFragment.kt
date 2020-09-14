@@ -7,8 +7,6 @@ import androidx.lifecycle.lifecycleScope
 import com.dropbox.android.external.store4.*
 import com.github.satoshun.example.R
 import com.github.satoshun.example.databinding.SimpleFragBinding
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -16,8 +14,6 @@ import kotlin.time.DurationUnit
 import kotlin.time.ExperimentalTime
 import kotlin.time.toDuration
 
-@ExperimentalCoroutinesApi
-@FlowPreview
 class SimpleFragment : Fragment(R.layout.simple_frag) {
   private lateinit var binding: SimpleFragBinding
 
@@ -28,10 +24,10 @@ class SimpleFragment : Fragment(R.layout.simple_frag) {
 
     val store = StoreBuilder
       .from(
-        fetcher = nonFlowValueFetcher<String, String> {
-          println("called source $it")
+        fetcher = Fetcher.of { key: String ->
+          println("called source $key")
           delay(500)
-          println("finished source $it")
+          println("finished source $key")
           "test"
         }
       )
