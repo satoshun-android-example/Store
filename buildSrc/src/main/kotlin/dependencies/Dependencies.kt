@@ -7,13 +7,13 @@ const val TARGET_SDK = 29
 private const val VKOTLIN = "1.4.10"
 private const val VNAVIGATION = "2.2.0"
 
-const val ANDROID_PLUGIN = "com.android.tools.build:gradle:4.0.1"
+const val ANDROID_PLUGIN = "com.android.tools.build:gradle:4.1.0"
 const val KOTLIN_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VKOTLIN"
 const val SAFEARGS_PLUGIN =
   "androidx.navigation:navigation-safe-args-gradle-plugin:$VNAVIGATION"
 const val VERSIONS_PLUGIN = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
 
-private const val VCOUROUTINE = "1.3.9"
+private const val VCOUROUTINE = "1.4.0"
 const val KOTLIN = "org.jetbrains.kotlin:kotlin-stdlib:$VKOTLIN"
 const val COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$VCOUROUTINE"
 const val UI_COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$VCOUROUTINE"
@@ -29,7 +29,7 @@ const val CARDVIEW = "androidx.cardview:cardview:1.0.0"
 
 const val INSETTER = "dev.chrisbanes:insetter-ktx:0.2.0"
 
-const val STORE = "com.dropbox.mobile.store:store4:4.0.0-alpha07"
+const val STORE = "com.dropbox.mobile.store:store4:4.0.0-beta01"
 const val STORE_FILE_SYSTEM = "com.dropbox.mobile.store:filesystem4:4.0.0-alpha07"
 
 const val MATERIAL = "com.google.android.material:material:1.1.0-beta02"
