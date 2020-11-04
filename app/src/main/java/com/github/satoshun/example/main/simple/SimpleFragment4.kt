@@ -47,8 +47,8 @@ class SimpleFragment4 : Fragment(R.layout.simple_frag) {
       )
       .cachePolicy(
         MemoryPolicy
-          .builder()
-          .setMemorySize(1024)
+          .builder<Any, Any>()
+          .setMaxSize(1024)
           .setExpireAfterWrite(10.toDuration(DurationUnit.SECONDS))
           .build()
       )

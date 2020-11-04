@@ -29,14 +29,20 @@ class SimpleFragment3 : Fragment(R.layout.simple_frag) {
 
     var currentItem: List<String>? = null
     val sourceOfTruth = SourceOfTruth.of<Unit, List<String>, List<String>>(
-      nonFlowReader = { currentItem },
+      nonFlowReader = {
+        println("nonFlowReader")
+        currentItem
+      },
       writer = { _, input ->
+        println("writer")
         currentItem = input
       },
       delete = {
+        println("delete")
         currentItem = null
       },
       deleteAll = {
+        println("deleteAll")
         currentItem = null
       }
     )
@@ -54,9 +60,9 @@ class SimpleFragment3 : Fragment(R.layout.simple_frag) {
       )
       .cachePolicy(
         MemoryPolicy
-          .builder()
-          .setMemorySize(1024)
-          .setExpireAfterWrite(10.toDuration(DurationUnit.MILLISECONDS))
+          .builder<Any, Any>()
+          .setMaxSize(1024)
+          .setExpireAfterWrite(1000.toDuration(DurationUnit.MILLISECONDS))
           .build()
       )
       .build()
@@ -88,6 +94,13 @@ class SimpleFragment3 : Fragment(R.layout.simple_frag) {
       val result = store.get(key)
 //      val result = store.fresh(key)
       println("get2 $result")
+    }
+
+    binding.button.setOnClickListener {
+      lifecycleScope.launch {
+        val result = store.get(key)
+        println("fetch $result")
+      }
     }
   }
 }

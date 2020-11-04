@@ -13,7 +13,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import okio.Buffer
-import java.util.concurrent.atomic.AtomicInteger
+import java.util.concurrent.atomic.*
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlin.time.ExperimentalTime
@@ -63,7 +63,7 @@ class FileRepository @Inject constructor(
       }
     )
   )
-    .cachePolicy(MemoryPolicy.builder().setExpireAfterWrite(10.seconds).build())
+    .cachePolicy(MemoryPolicy.builder<Any, Any>().setExpireAfterWrite(10.seconds).build())
     .build()
 
   suspend fun get(): Simple {

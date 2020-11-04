@@ -30,7 +30,7 @@ const val CARDVIEW = "androidx.cardview:cardview:1.0.0"
 const val INSETTER = "dev.chrisbanes:insetter-ktx:0.2.0"
 
 const val STORE = "com.dropbox.mobile.store:store4:4.0.0-beta01"
-const val STORE_FILE_SYSTEM = "com.dropbox.mobile.store:filesystem4:4.0.0-alpha07"
+const val STORE_FILE_SYSTEM = "com.dropbox.mobile.store:filesystem4:4.0.0-beta01"
 
 const val MATERIAL = "com.google.android.material:material:1.1.0-beta02"
 const val PAGING = "androidx.paging:paging-runtime:2.1.0"

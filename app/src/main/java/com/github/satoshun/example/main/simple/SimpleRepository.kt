@@ -23,7 +23,7 @@ class SimpleRepository @Inject constructor() {
         }
       )
       .cachePolicy(
-        MemoryPolicy.builder()
+        MemoryPolicy.builder<Any, Any>()
           .setExpireAfterWrite(60.seconds)
           .build()
       )
